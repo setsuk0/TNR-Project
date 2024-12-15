@@ -1,18 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'catboo', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 h1 {
     text-align: center;
-    background-color: #ffcccb;
-    color: #333;
+    background-color: #b983f7;
+    color: #220f1f;
     padding: 20px;
     margin: 0;
 }
 
 #map {
     margin: 20px auto;
-    border: 2px solid #333;
+    border: 2px solid #000000;
+}
+
+@font-face {
+    font-family: 'catboo'; /* Name you want to use for the font */
+    src: url('fonts/catboo.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal; /* Optional: Specify font weight if needed */
+    font-style: normal; /* Optional: Specify font style if needed */
 }
