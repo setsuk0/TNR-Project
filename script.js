@@ -76,3 +76,31 @@ function initMap() {
     });
 }
 
+document.getElementById('login-form').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert(data.message); // Login successful
+            window.location.href = 'index.html'; // Redirect to the main page
+        } else {
+            document.getElementById('login-message').textContent = data.message; // Show error message
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('login-message').textContent = "An error occurred. Please try again.";
+    }
+});

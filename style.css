@@ -71,10 +71,10 @@ nav .login-link:hover {
     border-radius: 10px;
 }
 
-/* Font loading for 'catboo' */
+/* Font loading for 'catpaw' */
 @font-face {
-    font-family: 'Catpaw'; /* Name you want to use for the font */
-    src: url('fonts/Catpaw.ttf') format('truetype'); /* Path to your font file */
+    font-family: 'Catpaw'; 
+    src: url('fonts/Catpaw.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -87,21 +87,23 @@ body.login-page {
     height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
     margin: 0;
+    font-family: 'Catpaw', sans-serif;
 }
 
 .login-container {
     background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 400px; /* Set fixed width */
+    margin: 20px; /* Ensure container stays centered */
 }
 
 .login-container h1 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #4d1164;
+    font-size: 2rem;
 }
 
 .login-container label {
@@ -109,28 +111,28 @@ body.login-page {
     text-align: left;
     margin-bottom: 5px;
     color: #555;
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* Larger font size */
 }
 
 .login-container input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem; /* Larger input font */
 }
 
 .login-container button {
-    background: #5fdaff;
+    background: #d302c8;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Larger button font */
 }
 
 .login-container button:hover {
-    background: #feb47b;
+    background: #d09be9;
 }
