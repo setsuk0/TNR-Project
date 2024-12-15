@@ -16,11 +16,11 @@ header {
 
 /* Title styling */
 .title {
-    font-family: 'catboo', sans-serif; /* Catboo font for the title */
-    font-size: 4rem; /* Large title */
+    font-family: 'Cattino', sans-serif;
+    font-size: 6rem; /* Large title */
     color: rgb(240, 199, 240); /* Soft purple text */
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     font-weight: bold;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     margin: 0;
@@ -73,8 +73,8 @@ nav .login-link:hover {
 
 /* Font loading for 'catpaw' */
 @font-face {
-    font-family: 'Catpaw'; 
-    src: url('fonts/Catpaw.ttf') format('truetype'); 
+    font-family: 'Cattino'; 
+    src: url('fonts/Cattino.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -85,9 +85,9 @@ body.login-page {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    background: linear-gradient(135deg, #ff5ff2, #f5a96f); /* Gradient background */
     margin: 0;
-    font-family: 'Catpaw', sans-serif;
+    font-family: 'Cattino', sans-serif;
 }
 
 .login-container {
@@ -103,7 +103,7 @@ body.login-page {
 .login-container h1 {
     margin-bottom: 30px;
     color: #4d1164;
-    font-size: 2rem;
+    font-size: 7cqmax;
 }
 
 .login-container label {
@@ -125,7 +125,7 @@ body.login-page {
 
 .login-container button {
     background: #d302c8;
-    color: white;
+    color: rgb(249, 248, 250);
     border: none;
     padding: 12px 15px;
     border-radius: 4px;
@@ -134,5 +134,5 @@ body.login-page {
 }
 
 .login-container button:hover {
-    background: #d09be9;
+    background: #dfa8f8;
 }
