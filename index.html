@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>TNR Cat Colony Tracker</h1>
+    <!-- Navigation bar -->
+    <header>
+        <h1 class="title">TNR Cat Colony Tracker</h1>
+        <nav>
+            <a href="login.html" class="login-link">Log In</a>
+        </nav>
+    </header>
+    
+    <!-- Map container -->
     <div id="map" style="height: 500px; width: 100%;"></div>
-    <!-- Link to your JavaScript file -->
+    
+    <!-- Include your JavaScript file -->
     <script src="script.js"></script>
+    
+    <!-- Google Maps API script -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBbw2xjDebqnGnGry_i-U0EPdTe-KBBE0&callback=initMap"></script>
 </body>
 </html>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBbw2xjDebqnGnGry_i-U0EPdTe-KBBE0&callback=initMap"></script>
-

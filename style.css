@@ -1,25 +1,136 @@
-body {
-    font-family: 'catboo', sans-serif;
+/* Reset some default styles */
+body, html {
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Catpaw', sans-serif; /* Default font */
 }
 
-h1 {
+/* Header styling */
+header {
+    background: linear-gradient(to right, #8e44ad, #ff007f, #e74c3c, #3498db); /* Gradient background */
     text-align: center;
-    background-color: #b983f7;
-    color: #220f1f;
-    padding: 20px;
-    margin: 0;
+    padding: 50px 0;
+    position: relative;
 }
 
+/* Title styling */
+.title {
+    font-family: 'catboo', sans-serif; /* Catboo font for the title */
+    font-size: 4rem; /* Large title */
+    color: rgb(240, 199, 240); /* Soft purple text */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Static underline for title */
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background: #fff; /* Static white underline */
+}
+
+/* Navigation bar */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav .login-link {
+    background: white;
+    color: #ff007f;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+}
+
+nav .login-link:hover {
+    background: #ff007f;
+    color: white;
+}
+
+/* Map container */
 #map {
     margin: 20px auto;
     border: 2px solid #000000;
+    height: 500px;
+    width: 90%;
+    border-radius: 10px;
 }
 
+/* Font loading for 'catboo' */
 @font-face {
-    font-family: 'catboo'; /* Name you want to use for the font */
-    src: url('fonts/catboo.ttf') format('truetype'); /* Path to your font file */
-    font-weight: normal; /* Optional: Specify font weight if needed */
-    font-style: normal; /* Optional: Specify font style if needed */
+    font-family: 'Catpaw'; /* Name you want to use for the font */
+    src: url('fonts/Catpaw.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Login Page Styles */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-container button {
+    background: #5fdaff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-container button:hover {
+    background: #feb47b;
 }
