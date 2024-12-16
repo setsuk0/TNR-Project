@@ -11,7 +11,7 @@ app.use(cors());
 
 // Hardcoded user credentials
 const USERNAME = "admin";
-const PASSWORD = "password123";
+const PASSWORD = "password6969";
 
 // Login endpoint
 app.post('/login', (req, res) => {

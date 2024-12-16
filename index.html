@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Homeless Cats</title>
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation bar -->
-    <header>
-        <h1 class="title">TNR Cat Colony Tracker</h1>
-        <nav>
-            <a href="login.html" class="login-link">Log In</a>
-        </nav>
-    </header>
-    
-    <!-- Map container -->
-    <div id="map" style="height: 500px; width: 100%;"></div>
-    
+    <h1>TNR Cat Colony Tracker</h1>
+
+    <!-- Login Link (Only visible if not logged in) -->
+    <nav>
+        <a href="login.html" class="login-link" id="login-link">Log In</a>
+    </nav>
+
+    <!-- Map container, initially hidden -->
+    <div id="map" style="height: 500px; width: 100%; display: none;"></div>
+
     <!-- Include your JavaScript file -->
     <script src="script.js"></script>
     
     <!-- Google Maps API script -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBbw2xjDebqnGnGry_i-U0EPdTe-KBBE0&callback=initMap"></script>
+
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') === 'true') {
+            // Show the map if logged in
+            document.getElementById('map').style.display = 'block';
+            initMap(); // Initialize the map
+        } else {
+            // Redirect to login page if not logged in
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>
