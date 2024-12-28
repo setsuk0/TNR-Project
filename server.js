@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
@@ -8,16 +9,21 @@ const PORT = 3000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Hardcoded user credentials
 const USERNAME = "admin";
-const PASSWORD = "password6969";
+const PASSWORD = "password123";
+
+// Serve the login page
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
 
 // Login endpoint
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    // Validate credentials
     if (username === USERNAME && password === PASSWORD) {
         res.status(200).json({ message: "Login successful!" });
     } else {
