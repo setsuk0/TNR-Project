@@ -17,7 +17,12 @@ const PASSWORD = "password123";
 
 // Serve the login page
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname, 'public', 'login.html');
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+// Serve the main page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Login endpoint
